@@ -1,0 +1,12 @@
+import java.util.*;
+public class Sample{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int dp[]=new int[n+1];
+        dp[0]=100;
+        for(int each:dp){
+            System.out.println(each);
+        }
+    }
+}
