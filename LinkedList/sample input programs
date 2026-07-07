@@ -1,0 +1,23 @@
+import java.util.*;
+public class PrintStrVal{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        LinkedList<String> list=new LinkedList<String>();
+        list.add("cibi");
+        list.add("dharnish");
+        list.add("karthi");
+        list.add("ramesh");
+        list.addFirst("indirani");
+        list.addLast("muruga");
+        list.removeFirst();
+        list.removeLast();
+        System.out.println(list);
+        System.out.println(list.getFirst());
+        System.out.println(list.getLast());
+        System.out.println(list.contains("dharnish"));
+        System.out.println(list.size());
+        for(String each:list){
+            System.out.print(each + " ");
+        }
+    }
+}
