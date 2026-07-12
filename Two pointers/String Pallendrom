@@ -1,0 +1,28 @@
+import java.util.*;
+public class Pallan {
+        public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+         String str=sc.nextLine();
+         char[] ch=str.toCharArray();
+        int index=0;
+        int newindex=ch.length-1;
+        while(index<newindex){
+            char temp=ch[newindex];
+            ch[newindex]=ch[index];
+            ch[index]=temp;
+            newindex--;
+            index++;
+        }
+
+        if(str.equals(new String(ch))){
+            System.out.print("pallen");
+        }
+        else{
+            System.out.print("not pallen");
+        }
+        
+    
+
+    }
+    
+}
