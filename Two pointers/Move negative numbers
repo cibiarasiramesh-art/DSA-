@@ -1,0 +1,25 @@
+import java.util.*;
+public class MoveAllEvenNos{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+       
+        int arr[]=new int[]{1,2,3,4,5};
+        int index=0;int newindex=0;
+        while(index<arr.length){
+            if(arr[index]%2==0){
+                int temp=arr[newindex];
+                arr[newindex]=arr[index];
+                arr[index]=temp;
+                newindex++;
+            }
+            index++;
+        }
+        for(int each: arr){
+            System.out.print(each+" ");
+        }
+
+
+
+
+    }
+}
