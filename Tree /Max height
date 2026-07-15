@@ -1,0 +1,27 @@
+class Node{
+    int val;
+    Node right;
+    Node left;
+    Node(int val){
+        this.val = val;
+    }
+}
+public class HEightCount {
+    public static int height(Node root){
+        if(root == null){
+            return 0;
+        }
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        return 1+Math.max(leftHeight, rightHeight);
+    }
+
+    public static void main(String[] args){
+        Node root = new Node(20);
+        root.left = new Node(12);
+        root.left.left = new Node(11);
+        root.left.left.left = new Node(10);
+        root.right = new Node(31);
+        System.out.println("Height: " + height(root));
+    }
+}
