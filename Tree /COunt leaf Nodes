@@ -1,0 +1,28 @@
+import java.util.*;
+class Node{
+    int val;
+    Node left;
+    Node right;
+    Node(int val){
+        this.val=val;
+    }
+
+}
+public class LEafCount {
+    public static int count(Node root){
+        if(root==null){
+            return 0;
+        }
+        if(root.right==null && root.left==null){
+            return 1;
+        }
+        return count(root.left) + count(root.right);
+    }
+    public static void main(String[] args){
+        Node root=new Node(10);
+        root.right=new Node(3);
+        root.left=new Node(8);
+        System.out.print(count(root));
+    }
+    
+}
