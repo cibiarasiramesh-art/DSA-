@@ -1,0 +1,31 @@
+import java.util.*;
+class Node{
+    int val;
+    Node right;
+    Node left;
+    Node(int val){
+        this.val=val;
+    }
+}
+public class samplePrint{
+    public static int count(Node root){
+        if(root==null){
+            return 0;
+        }
+        return 1+count(root.left)+count(root.right);
+    }
+    
+
+
+    public static void main(String[] args){
+       
+        Node root=new Node(10);
+        root.left=new Node(8);
+        root.right=new Node(20);
+        root.left.left=new Node(7);
+        System.out.println(root.val);
+        System.out.println(root.left.val);
+        System.out.println(root.right.val);
+        System.out.println("Count of nodes: " + count(root));
+    }
+}
